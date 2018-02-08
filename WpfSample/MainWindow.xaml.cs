@@ -29,5 +29,12 @@ namespace WpfSample
         {
             MessageBox.Show("Butona Tıklandı.");
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            MessageBox.Show(cmbBoxListe.SelectedItem.ToString());
+
+            MessageBox.Show(((ComboBoxItem)(cmbBoxListe.SelectedItem)).Content.ToString());
+        }
     }
 }

@@ -7,7 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Button Name="btntikla" Width="100" Height="50" Content="Tıkla" Click="btntikla_Click" />
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="#FF00FFFA" Offset="1"/>
+                <GradientStop Color="White"/>
+            </LinearGradientBrush>
+        </Grid.Background><ComboBox x:Name="cmbBoxListe" HorizontalAlignment="Left" Margin="334,55,0,0" VerticalAlignment="Top" Width="120" Height="50" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem>Item 1</ComboBoxItem>
+            <ComboBoxItem>Item 2</ComboBoxItem>
+            <ComboBoxItem>Item 3</ComboBoxItem>
+            <Button Name="btntikla" Width="100" Height="50" Content="Tıkla" Click="btntikla_Click" Background="#FF004CFF" FontWeight="Bold" FontSize="22" FontFamily="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}" />
+        </ComboBox>
 
     </Grid>
 </Window>
